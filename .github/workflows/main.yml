@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -16,5 +16,5 @@ jobs:
       uses: katalon-studio/katalon-studio-github-action@v2.2
       with:
           version: '8.2.0'
-          projectPath: $GITHUB_WORKSPACE
+          projectPath: ${GITHUB_WORKSPACE}
           args: 'katalonc -noSplash -runMode=console -retry=0 -testSuitePath="Test Suites/TS GitHub Action/Github Action Test Suite" -executionProfile="default" -browserType="Chrome" -apiKey="${{secrets.KATALON_API_KEY}}" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=false -webui.autoUpdateDrivers=true'

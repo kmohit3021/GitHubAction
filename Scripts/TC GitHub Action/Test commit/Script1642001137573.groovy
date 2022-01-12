@@ -21,3 +21,5 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('www.google.com')
 
+WebUI.delay(5)
+

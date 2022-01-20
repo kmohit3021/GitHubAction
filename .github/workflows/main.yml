@@ -16,4 +16,4 @@ jobs:
       with:
           version: '8.2.0'
           projectPath: '${{github.workspace}}'
-          args: 'katalonc -noSplash -retry=0 -testSuitePath="Test Suites/TS GitHub Action/Github Action Test Suite" -executionProfile="default" -browserType="Chrome" -apiKey= ${{secrets.KATALON_API_KEY}} --config -webui.autoUpdateDrivers=true'
+          args: './katalonc -noSplash -retry=0 -testSuitePath="Test Suites/TS GitHub Action/Github Action Test Suite" -executionProfile="default" -browserType="Chrome" -apiKey= ${{secrets.KATALON_API_KEY}} --config -webui.autoUpdateDrivers=true'
